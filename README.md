@@ -1,10 +1,10 @@
 # GRUMIDI
 
 A GRU<sup>1</sup>-based RNN<sup>2</sup> for rhythmic pattern generation.
-The RNN model is a 
-[char-rnn](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) 
-trained on a sequence of 
-[unit vectors](https://en.wikipedia.org/wiki/Unit_vector) 
+The RNN model is a
+[char-rnn](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+trained on a sequence of
+[unit vectors](https://en.wikipedia.org/wiki/Unit_vector)
 representing the input MIDI file.
 
 
@@ -43,7 +43,7 @@ The dimension of the [unit vectors](http://reference.wolfram.com/language/ref/Un
 Inspired by [LSTMetallica](https://github.com/keunwoochoi/LSTMetallica), the encoded MIDI input
 
 
-
+ciao ciao
 
 
 
