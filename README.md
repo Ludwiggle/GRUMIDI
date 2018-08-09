@@ -40,10 +40,11 @@ The generated MIDI inherits this time-quantization.
 
 The dimension of the [unit vectors](http://reference.wolfram.com/language/ref/UnitVector.html) is equal to the number of different "notes", e.g. the chromatic scale would be encoded with 12-dimensional unit vectors. Polyphony is encoded by vector addition of simultaneous events.
 
-Inspired by [LSTMetallica](https://github.com/keunwoochoi/LSTMetallica), the encoded MIDI input
+Similarly to [LSTMetallica](https://github.com/keunwoochoi/LSTMetallica), the encoded input MIDI is riffled with "BAR" every 16 unit vectors for *segmentation of measures*. These "BAR" markers are deleted before decoding to MIDI.
 
 
-ciao ciao
+
+
 
 
 
