@@ -9,10 +9,10 @@ representing the input MIDI file.
 
 
 ## Prerequisite
-[MathKernel](https://www.wolfram.com/cdf-player) and
+[WolframKernel](https://www.wolfram.com/cdf-player) 
 [Wolframscript](https://www.wolfram.com/wolframscript)
 
-Run `$ wolframscript -configure` and set the variable `WOLFRAMSCRIPT_KERNELPATH` to your local `MathKernel` address
+Run `$ wolframscript -configure` and set the variable `WOLFRAMSCRIPT_KERNELPATH` to your local `WolframKernel` address
 
 
 ## Usage
@@ -34,13 +34,13 @@ The trained net and decoding parameters are saved in `data/`.
 
 ## Discussion
 
-In general, a MIDI file is not defined on a time-grid; the beginning and the end of a MIDI event can be machine-precision digits.
-The first script will take care of time-quantization by fitting the MIDI events on a time-grid at a resolution equal to the minimum time-interval between two events found in the input MIDI file.
+In general, a MIDI file is not defined on a time-grid; MIDI events might be defined by machine-precision digits.
+The first script will take care of time-quantization by fitting every MIDI event on a time-grid the resolution of which is equal to the minimum distance between two consecutive events that are found in the input MIDI file.
 The generated MIDI inherits this time-quantization.
 
-The dimension of the [unit vectors](http://reference.wolfram.com/language/ref/UnitVector.html) is equal to the number of different "notes", e.g. the chromatic scale would be encoded with 12-dimensional unit vectors. Polyphony is encoded by vector addition of simultaneous events.
+The dimension of the [unit vectors](http://reference.wolfram.com/language/ref/UnitVector.html) is equal to the number of different "notes" found in the input MIDI, e.g. the chromatic scale would be encoded with 12-dimensional unit vectors. Polyphony is encoded by vector addition of simultaneous events.
 
-Similarly to [LSTMetallica](https://github.com/keunwoochoi/LSTMetallica), the encoded input MIDI is riffled with "BAR" every 16 unit vectors for *segmentation of measures*. These "BAR" markers are deleted before decoding to MIDI.
+Similarly to [LSTMetallica](https://github.com/keunwoochoi/LSTMetallica), the encoded input MIDI is riffled with "BAR" every 16 unit vectors for *segmentation of measures*. These "BAR" markers are deleted once the nerual net output is decoded to MIDI format.
 
 
 
