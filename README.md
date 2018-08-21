@@ -3,9 +3,8 @@
 A GRU<sup>1</sup>-based RNN<sup>2</sup> for rhythmic pattern generation.
 The RNN model is a
 [char-rnn](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-trained on a sequence of
+that gets trained on an input MIDI file encoded as a sequence of
 [unit vectors](https://en.wikipedia.org/wiki/Unit_vector)
-representing the input MIDI file.
 
 
 ## Prerequisite
